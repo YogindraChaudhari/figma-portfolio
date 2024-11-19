@@ -3,6 +3,11 @@ import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+import watchitImage from "../assets/watchit-plus-thumbnail.png";
+import musicPlayerImage from "../assets/music-player-thumbnail.png";
+import busReservationImage from "../assets/bus-reservation-thumbnail.png";
+
+
 const projects = {
   "watchit-plus": {
     title: "WatchIT+",
@@ -10,7 +15,7 @@ const projects = {
       "A movie streaming platform design with a user-friendly interface and modern aesthetics.",
     figmaLink:
       "https://www.figma.com/proto/aolJOG89XUqe4Rf602hvAZ?node-id=0-1&t=LWD5ZV5oAvcMZJsu-6",
-    image: "/assets/watchit-plus-thumbnail.png",
+    image: watchitImage,
     details: [
       "Home screen with featured content.",
       "Detailed movie and series pages.",
@@ -22,7 +27,7 @@ const projects = {
     description: "A sleek and modern music player UI design.",
     figmaLink:
       "https://www.figma.com/proto/wcl9KSU9H0zi3Wj9ALBtZ7?node-id=0-1&t=iWlMc6prNSrUOmgu-6",
-    image: "/assets/music-player-thumbnail.png",
+    image: musicPlayerImage,
     details: [
       "Play, pause, and skip buttons with custom animations.",
       "Playlist management and now-playing UI.",
@@ -34,7 +39,7 @@ const projects = {
     description: "An interactive design for booking bus tickets.",
     figmaLink:
       "https://www.figma.com/proto/zVRhy1uJwPbbBPTeZVpiWE?node-id=0-1&t=BwNvxSCe1vCTkXMi-6",
-    image: "/assets/bus-reservation-thumbnail.png",
+    image: busReservationImage,
     details: [
       "Real-time seat selection interface.",
       "Booking confirmation and payment flow.",
