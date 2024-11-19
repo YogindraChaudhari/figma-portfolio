@@ -7,7 +7,6 @@ import watchitImage from "../assets/watchit-plus-thumbnail.png";
 import musicPlayerImage from "../assets/music-player-thumbnail.png";
 import busReservationImage from "../assets/bus-reservation-thumbnail.png";
 
-
 const projects = {
   "watchit-plus": {
     title: "WatchIT+",
@@ -66,19 +65,24 @@ const ProjectDetail = () => {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto p-8">
-        <div className="flex flex-col md:flex-row">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full md:w-1/2 rounded-lg shadow-md"
-          />
-          <div className="md:ml-8 mt-6 md:mt-0">
-            <h1 className="text-4xl font-bold">{project.title}</h1>
+      <div className="container mx-auto px-6 py-12">
+        <div className="flex flex-col md:flex-row items-center">
+          {/* Image Section */}
+          <div className="w-full md:w-1/2 max-w-lg mx-auto md:mx-0">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+
+          {/* Details Section */}
+          <div className="mt-8 md:mt-0 md:ml-10 text-center md:text-left">
+            <h1 className="text-3xl font-bold text-gray-800">{project.title}</h1>
             <p className="text-gray-600 mt-4">{project.description}</p>
-            <ul className="list-disc pl-5 mt-4">
+            <ul className="list-disc pl-5 mt-6 text-gray-700">
               {project.details.map((detail, index) => (
-                <li key={index} className="text-gray-700">
+                <li key={index} className="mt-2">
                   {detail}
                 </li>
               ))}
@@ -87,7 +91,7 @@ const ProjectDetail = () => {
               href={project.figmaLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              className="inline-block mt-6 bg-blue-500 text-white px-6 py-3 rounded-md shadow hover:bg-blue-600"
             >
               View on Figma
             </a>
